@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="4BA Cinematic Gold - The Ultimate Streaming Ecosystem Gateway">
+  <title>4BA Cinematic Gold - البوابة الرئيسية</title>
+  <link rel="stylesheet" href="./styles/shell.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='90' fill='%23d4af37'>🎬</text></svg>">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="header-container">
+      <a href="#" class="logo">
+        <span class="logo-icon">🎬</span>
+        <span>4BA Gold</span>
+      </a>
+
+      <!-- Navigation Menu -->
+      <nav>
+        <ul class="nav-menu">
+          <!-- Populated by JavaScript -->
+        </ul>
+      </nav>
+
+      <!-- Header Controls -->
+      <div class="header-controls">
+        <!-- Search Bar -->
+        <div class="search-bar">
+          <input 
+            type="text" 
+            id="search-input" 
+            placeholder="ابحث..."
+            aria-label="Search"
+          >
+        </div>
+
+        <!-- Diagnostics Button -->
+        <button 
+          id="diagnostics-btn" 
+          class="btn btn-diagnostics" 
+          title="Run ecosystem diagnostics"
+          aria-label="Diagnostics"
+        >
+          🏥 فحص
+        </button>
+
+        <!-- Settings Button -->
+        <button 
+          id="settings-btn" 
+          class="btn btn-settings" 
+          title="Open settings"
+          aria-label="Settings"
+        >
+          ⚙️
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <div class="container">
+    <!-- Viewport - Dynamic Content Area -->
+    <div id="viewport">
+      <div class="placeholder">
+        <div class="placeholder-icon">⏳</div>
+        <h2>جاري التحميل...</h2>
+        <div class="loading-spinner"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Settings Drawer -->
+  <div id="settings-overlay" class="settings-overlay" style="display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.7); z-index: 999; cursor: pointer;"></div>
+  
+  <div id="settings-drawer" class="settings-drawer">
+    <div class="settings-header">
+      <h2>الإعدادات</h2>
+      <button id="close-settings" class="close-btn">✕</button>
+    </div>
+
+    <!-- Discovery Timeout Setting -->
+    <div class="setting-item">
+      <label class="setting-label">مهلة فحص المزودات ⏱️</label>
+      <p class="setting-description">
+        الوقت المسموح لفحص حالة وحدة واحدة (من 2 إلى 15 ثانية)
+      </p>
+      <div class="slider-container">
+        <input 
+          type="range" 
+          id="timeout-slider" 
+          min="2" 
+          max="15" 
+          value="5"
+          aria-label="Timeout seconds"
+        >
+        <span class="timeout-value" id="timeout-value">5</span>
+        <span style="color: var(--text-secondary);">ثانية</span>
+      </div>
+    </div>
+
+    <!-- Early Exit Toggle -->
+    <div class="setting-item">
+      <label class="setting-label">التشغيل فور أول نتيجة صالحة ⚡</label>
+      <p class="setting-description">
+        عند تفعيلها، يتم تحميل الوحدة فور التأكد من وجودها، دون انتظار التحميل الكامل
+      </p>
+      <label class="toggle-switch">
+        <input 
+          type="checkbox" 
+          id="early-exit-toggle" 
+          checked
+          aria-label="Early exit enabled"
+        >
+        <span class="toggle-slider"></span>
+      </label>
+    </div>
+
+    <!-- Info -->
+    <div class="setting-item" style="background: rgba(212, 175, 55, 0.1); padding: 1rem; border-radius: 4px; border-left: 3px solid var(--accent-gold);">
+      <h3 style="color: var(--accent-gold); margin-bottom: 0.5rem;">ℹ️ معلومات النظام</h3>
+      <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.8;">
+        🌐 <strong>النظام البيئي:</strong> 4BA Cinematic Gold<br>
+        👤 <strong>المالك:</strong> MA-TV<br>
+        📦 <strong>الوحدات النشطة:</strong> 20+<br>
+        🔌 <strong>البوابة الرئيسية:</strong> app-shell<br>
+        💾 <strong>التخزين:</strong> Local-First (بدون خوادم خارجية)
+      </p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>
+      🎬 <strong>4BA Cinematic Gold</strong> — 
+      <span dir="ltr">v1.0 Gateway</span> | 
+      تم البناء بدون أطر عمل خارجية ثقيلة | 
+      <a href="https://github.com/ma-tv/app-shell" style="color: var(--accent-gold); text-decoration: none;">GitHub</a>
+    </p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="./scripts/app.js"></script>
+</body>
+</html>
